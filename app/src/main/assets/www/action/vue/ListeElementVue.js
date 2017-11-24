@@ -1,23 +1,23 @@
-var ListeElementVue = function()
+var ListeElementVue = function(listeElement)
 {
-	this.afficher = function()
-	{
-		var pageListeElement = $("#page-liste-element").html()
+    this.afficher = function()
+    {
 
-		$("body").html(pageListeElement);
-		var htmlListeElement = $("#liste-element");
+        $("body").html(ListeElementVue.pageListeElement);
 
-		var li = "";
+        var htmlListeElement = $("#liste-element");
+        var li = "";
+        for (var indiceElement in listeElement)
+        {
+            li += '<li><a href="#element/' +
+                  listeElement[indiceElement].id +' ">' +
+                  listeElement[indiceElement].nom + "     " +
+                  '</a><a href="#modifier-element/' +
+                  listeElement[indiceElement].id +
+                  '">Modifier</a></li>';
 
-		var elementDAO = new ElementDAO();
-
-		var listeElement = elementDAO.getListeElement();
-
-		for (var indiceElement in listeElement)
-			{
-			li += '<li><a href = "#element/'+ indiceElement +'">'+ listeElement[indiceElement].nom + '</a></li>';
-			}
-
-		htmlListeElement.html(li);
-	}
+        }
+        htmlListeElement.html(li);
+    }
 }
+ListeElementVue.pageListeElement = $("#page-liste-element").html();
