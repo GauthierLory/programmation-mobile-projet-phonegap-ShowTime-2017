@@ -18,7 +18,7 @@ var AjouterElementVue = function()
             var categorie = $("#categorie").val();
             var genre = $("#genre").val();
 
-            instance.element = new element(nom, synopsis, time, date, categorie, genre)
+            instance.element = new Element(nom, synopsis, time, date, categorie, genre)
             window.location.hash = "#AjouterElementVue:NouveauElement";
         });
     }

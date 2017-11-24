@@ -63,15 +63,15 @@
                         <input type="text" name="genre" id="genre" />
                     </div>
                 </fieldset>
-                <input class="btnModif" type="submit" value="Modifier la montre"/>
+                <input class="btnModif" type="submit" value="Modifier le film ou la Serie"/>
                   </br>
                   <a class="annuler" href="#">Annuler et revenir &agrave; la liste</a>
             </form>
         </script>
 
 
-        <script id="page-ajouter-montre" type="text/plain">
-            <h1>Ajouter une montre</h1>
+        <script id="page-ajouter-element" type="text/plain">
+            <h1>Ajouter un Film ou une Série</h1>
             <form id = "formulaire-ajouter">
                 <fieldset>
                     <legend>Identification du Film ou de la Série</legend>
@@ -97,14 +97,22 @@
                     </div>
                     <div>
                         <label for="categorie">Categorie :</label>
-                        <input type="text" name="categorie" id="categorie" />
+                        <select id="categorie" name="categorie">
+                            <option>Serie</option>
+                            <option>Film</option>
+                        </select>
                     </div>
                     <div>
                         <label for="genre">Genre :</label>
-                        <input type="text" name="genre" id="genre" />
+                        <select id="genre" name="genre">
+                            <option>Action</option>
+                            <option>Dramatique</option>
+                            <option>Humour</option>
+                            <option>Documentaire</option>
+                        </select>
                     </div>
                 </fieldset>
-                <input class="btn" type="submit" value="Ajouter la montre"/>
+                <input class="btn" type="submit" value="Ajouter le film/serie"/>
                   </br>
                   <a class="annuler" href="#">Annuler et revenir &agrave; la liste</a>
             </form>
