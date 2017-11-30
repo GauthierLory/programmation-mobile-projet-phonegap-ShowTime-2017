@@ -3,7 +3,7 @@ var ListeElementVue = function(listeElement)
     this.afficher = function()
     {
 
-        $("body").html(ListeElementVue.pageListeElement);
+        $("#contenu").html(ListeElementVue.pageListeElement);
 
         var htmlListeElement = $("#liste-element");
         var li = "";

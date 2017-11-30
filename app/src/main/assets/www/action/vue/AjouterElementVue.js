@@ -6,7 +6,7 @@ var AjouterElementVue = function()
     {
         this.element = null;
 
-        $("body").html(AjouterElementVue.pageAjouterElement);
+        $("#contenu").html(AjouterElementVue.pageAjouterElement);
 
         $("#formulaire-ajouter").on("submit", function (evenement)
         {
