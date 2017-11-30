@@ -9,3 +9,9 @@
   -webkit-animation: animation 2000ms linear infinite both;
   animation: animation 2000ms linear infinite both;
 }
+
+#bouton {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+}
