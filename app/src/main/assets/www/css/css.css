@@ -15,3 +15,8 @@
   -webkit-animation-delay: 1s;
   -webkit-animation-iteration-count: infinite;
 }
+#titre {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+}
