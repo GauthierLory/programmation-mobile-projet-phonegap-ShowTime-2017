@@ -1,0 +1,11 @@
+#image {
+    height: auto;
+    width: auto;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.animation-target {
+  -webkit-animation: animation 2000ms linear infinite both;
+  animation: animation 2000ms linear infinite both;
+}
