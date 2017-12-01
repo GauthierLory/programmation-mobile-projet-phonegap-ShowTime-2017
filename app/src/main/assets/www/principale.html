@@ -33,7 +33,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Ajouter à la bibliothèque</a>
+                <a class="nav-link" href="#ajouter-element">Ajouter à la bibliothèque</a>
             </li>
         </ul>
     </div>
@@ -46,9 +46,9 @@
 
         <script id="page-liste-element" type="text/plain">
             <div id="page">
-                <h1>Liste de Film et Série</h1> </br>
+                <h1 id="titre" class="animated pulse">Liste de Film et Série</h1>
                 <ul id="liste-element"></ul>
-                <a class ="ajouter-element" href="#ajouter-element"> Ajouter un Film ou un Série </a>
+                <a class="btn btn-success animated rubberBand" href="#ajouter-element"> Ajouter un Film ou un Série </a>
             </div>
         </script>
 
@@ -104,53 +104,49 @@
         <script id="page-ajouter-element" type="text/plain">
             <h1>Ajouter un Film ou une Série</h1>
             <form id = "formulaire-ajouter">
-                <fieldset>
-                    <legend>Identification du Film ou de la Série</legend>
-                    <div>
-                        <label for="nom">Nom :</label>
-                        <input type="text" name="nom" id="nom" /></br>
-                    </div>
-                    <div>
-                        <label for="Synopsis">Synopsis :</label>
-                        <input type="text" name="synopsis" id="synopsis" /></br>
-                    </div>
-                </fieldset>
 
-                <fieldset>
-                     <legend>D&eacute;tails sur le Film ou la Série</legend>
-                    <div>
-                        <label for="time">Durée :</label></br>
-                        <input type="time" name="time" id="time">
-                    </div>
-                    <div>
-                        <label for="date">Date :</label>
-                        <input type="date" name="date" id="date" />
-                    </div>
-                    <div>
-                        <label for="categorie">Categorie :</label>
-                        <select id="categorie" name="categorie">
-                            <option>Serie</option>
-                            <option>Film</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="genre">Genre :</label>
-                        <select id="genre" name="genre">
-                            <option>Action</option>
-                            <option>Dramatique</option>
-                            <option>Humour</option>
-                            <option>Documentaire</option>
-                        </select>
-                    </div>
-                </fieldset>
-                <input class="btn" type="submit" value="Ajouter le film/serie"/>
+                <div class="field">
+                    <input type="text" name="nom" id="nom" required>
+                    <label for="nom">Nom</label>
+                </div>
+                </br>
+
+                <div class="field">
+                    <input type="textarea" name="synopsis" id="synopsis" required>
+                    <label for="Synopsis">Synopsis</label>
+                </div>
+                </br>
+
+                <div class="field">
+                   <input type="time" name="time" id="time" required>
+                    <label for="time">Date / dure</label></br>
+                    <input type="date" name="date" id="date" required>
+                </div>
+                </br>
+
+                <div class="field">
+                     <select id="categorie" name="categorie" required>
+                        <option>Serie</option>
+                        <option>Film</option>
+                    </select>
+                    <label for="categorie">Film / Serie</label>
+                </div>
+                </br>
+
+                <div class="field">
+                     <select id="genre" name="genre" required>
+                        <option>Humour</option>
+                        <option>Action</option>
+                    </select>
+                    <label for="genre">Genre</label>
+                </div>
+                </br>
+
+                <input class="btn btn-success animated rubberBand" type="submit" value="Ajouter le film/serie"/>
                   </br>
-                  <a class="annuler" href="#">Annuler et revenir &agrave; la liste</a>
+                  <a class="btn btn-success animated rubberBand" href="#">Annuler et revenir &agrave; la liste</a>
             </form>
         </script>
-
-    <h1 id="titre" class="animated pulse">Film</h1>
-    <button type="button" id="bouton" class="btn btn-success animated rubberBand">Ajouter</button>
 
 </main><!-- /.container -->
 

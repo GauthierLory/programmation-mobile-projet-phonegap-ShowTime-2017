@@ -4,7 +4,7 @@ var ElementVue = function (element)
 	{
 		//var pageListeElement = $("#page-element").html();
 
-		$("body").html(ElementVue.pageElement);
+		$("#contenu").html(ElementVue.pageElement);
 
 		$("#element-nom").html(element.nom);
 		$("#element-synopsis").html(element.synopsis);

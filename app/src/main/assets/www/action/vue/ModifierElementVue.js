@@ -5,7 +5,7 @@ var ModifierElementVue = function(element)
 
     this.afficher = function()
     {
-        $("body").html(ModifierElementVue.pageModifierElement);
+        $("#contenu").html(ModifierElementVue.pageModifierElement);
 
         var elementNom = '<label for="nom">Nom</label><input type="text" name="nom" id="nom" value ="'+ element.nom +'"/>';
         $("#nom").html(elementNom);
