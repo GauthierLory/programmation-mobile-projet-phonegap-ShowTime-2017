@@ -1,172 +1,181 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>SHOWTIME</title>
+        <title>SHOWTIME</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/css.css" rel="stylesheet">
-    <link href="css/bounce.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-</head>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/css.css" rel="stylesheet">
+        <link href="css/bounce.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+    </head>
 
-<body>
+    <body>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#"><img class="animation-target" id="image" src="images/logo/logo.jpg"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#"><img class="animation-target" id="image" src="images/logo/logo.jpg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ma bibliothèque</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#liste-film">Mes films</a>
-                    <a class="dropdown-item" href="#">Mes séries</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#ajouter-element">Ajouter à la bibliothèque</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-</br></br></br></br>
-
-<main role="main" id="contenu" class="container">
-
-    Il y a une erreur dans le programme Singh
-
-        <script id="page-liste-element" type="text/plain">
-            <div id="page">
-                <h1 id="titre" class="animated pulse">Liste de Film et Série</h1>
-                <ul id="liste-element"></ul>
-                <a class="btn btn-success animated rubberBand" href="#ajouter-element"> Ajouter un Film ou un Série </a>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ma bibliothèque</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="#liste-film">Mes films</a>
+                            <a class="dropdown-item" href="#">Mes séries</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ajouter-element">Ajouter à la bibliothèque</a>
+                    </li>
+                </ul>
             </div>
-        </script>
+        </nav>
+        </br></br></br></br>
 
-        <script id="page-element" type="text/plain">
-            <h1 id="element-nom"></h1>
-            <h2 id="element-synopsis"></h2>
-            <p id="element-duree"></p>
-            <p id="element-date"></p>
-            <p id="element-categorie"></p>
-            <p id="element-genre"></p></br>
-        </script>
-
-        <script id="page-modifier-element" type="text/plain">
-            <h1>Modifier un Film ou un Série</h1>
-            <form id = "formulaire-modifier">
-                <fieldset>
-                    <legend>Identification du Film ou de la Série</legend>
-                    <div>
-                        <label for="nom">Nom</label>
-                        <input type="text" name="nom" id="nom" /></br>
+        <main role="main" id="contenu" class="container">
+                <script id="page-liste-element" type="text/plain">
+                    <div id="page">
+                        <h1 id="titre" class="animated pulse">Liste de Film et Série</h1>
+                        <ul id="liste-element"></ul>
+                        <a class="btn btn-success animated rubberBand" href="#ajouter-element"> Ajouter un Film ou un Série </a>
                     </div>
-                    <div>
-                        <label for="Synopsis">Synopsis</label>
-                        <input type="text" name="synopsis" id="synopsis" /></br>
-                    </div>
-                </fieldset>
+                </script>
 
-                <fieldset>
-                     <legend>D&eacute;tails sur le Film ou la Série</legend>
-                    <div>
-                        <label for="time">Temps</label></br>
-                        <input type="time" name="time" id="time">
-                    </div>
-                    <div>
-                        <label for="date">Date</label>
-                        <input type="date" name="date" id="date" />
-                    </div>
-                    <div>
-                        <label for="categorie">Categorie</label>
-                        <input type="text" name="categorie" id="categorie" />
-                    </div>
-                    <div>
-                        <label for="genre">Genre</label>
-                        <input type="text" name="genre" id="genre" />
-                    </div>
-                </fieldset>
-                <input class="btnModif" type="submit" value="Modifier le film ou la Serie"/>
-                  </br>
-                  <a class="annuler" href="#">Annuler et revenir &agrave; la liste</a>
-            </form>
-        </script>
+                <script id="page-element" type="text/plain">
+                    <h1 id="element-nom"></h1>
+                    <h2 id="element-synopsis"></h2>
+                    <p id="element-duree"></p>
+                    <p id="element-date"></p>
+                    <p id="element-categorie"></p>
+                    <p id="element-genre"></p></br>
+                </script>
 
-        <script id="page-ajouter-element" type="text/plain">
-            <h1>Ajouter un Film ou une Série</h1>
-            <form id = "formulaire-ajouter">
+                <script id="page-modifier-element" type="text/plain">
+                    <h1>Modifier un Film ou un Série</h1>
+                    <form id = "formulaire-modifier">
+                        <fieldset>
+                            <legend>Identification du Film ou de la Série</legend>
+                            <div>
+                                <label for="nom">Nom</label>
+                                <input type="text" name="nom" id="nom" /></br>
+                            </div>
+                            <div>
+                                <label for="Synopsis">Synopsis</label>
+                                <input type="text" name="synopsis" id="synopsis" /></br>
+                            </div>
+                        </fieldset>
 
-                <div class="field">
-                    <input type="text" name="nom" id="nom" required>
-                    <label for="nom">Nom</label>
-                </div>
-                </br>
+                        <fieldset>
+                             <legend>D&eacute;tails sur le Film ou la Série</legend>
+                            <div>
+                                <label for="time">Temps</label></br>
+                                <input type="time" name="time" id="time">
+                            </div>
+                            <div>
+                                <label for="date">Date</label>
+                                <input type="date" name="date" id="date" />
+                            </div>
+                            <div>
+                                <label for="categorie">Categorie</label>
+                                <input type="text" name="categorie" id="categorie" />
+                            </div>
+                            <div>
+                                <label for="genre">Genre</label>
+                                <input type="text" name="genre" id="genre" />
+                            </div>
+                        </fieldset>
+                        <input class="btnModif" type="submit" value="Modifier le film ou la Serie"/>
+                          </br>
+                          <a class="annuler" href="#">Annuler et revenir &agrave; la liste</a>
+                    </form>
+                </script>
+                
+                <script id="page-ajouter-element" type="text/plain">
+                    <link rel="stylesheet" href="css/formoid-biz-red.css" type="text/css" />
+                    <h1>Ajouter un Film ou une Série</h1>
 
-                <div class="field">
-                    <input type="textarea" name="synopsis" id="synopsis" required>
-                    <label for="Synopsis">Synopsis</label>
-                </div>
-                </br>
+                    <form enctype="multipart/form-data" id="formulaire-ajouter" class="formoid-biz-red" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="post">
+                        <div class="title"><h2>hi</h2></div>
+                        <div class="element-input">
+                            <label class="title"><span class="required">*</span></label>
+                            <input class="large" type="text" name="input" required="required" placeholder="Titre"/>
+                        </div>
 
-                <div class="field">
-                   <input type="time" name="time" id="time" required>
-                    <label for="time">Date / dure</label></br>
-                    <input type="date" name="date" id="date" required>
-                </div>
-                </br>
+                        <div class="element-textarea"><label class="title"><span class="required">*</span></label>
+                            <textarea class="medium" name="textarea" cols="20" rows="5" required="required" placeholder="Synopsis"></textarea>
+                        </div>
 
-                <div class="field">
-                     <select id="categorie" name="categorie" required>
-                        <option>Serie</option>
-                        <option>Film</option>
-                    </select>
-                    <label for="categorie">Film / Serie</label>
-                </div>
-                </br>
+                        <div class="element-file">
+                            <label class="title"></label>
+                            <label class="large" >
+                                <div class="button">Choisir fichier</div>
+                                <input type="file" class="file_input" name="file" />
+                                <div class="file_text">pas de fichiers</div>
+                            </label>
+                        </div>
 
-                <div class="field">
-                     <select id="genre" name="genre" required>
-                        <option>Humour</option>
-                        <option>Action</option>
-                        <option>Drama</option>
-                    </select>
-                    <label for="genre">Genre</label>
-                </div>
-                </br>
+                        <div class="element-date"><label class="title"><span class="required">*</span></label>
+                            <input class="large" data-format="yyyy-mm-dd" type="date" name="date" required="required" placeholder="Date"/>
+                        </div>
 
-                <input class="btn btn-success animated rubberBand" type="submit" value="Ajouter le film/serie"/>
-                  </br>
-                  <a class="btn btn-success animated rubberBand" href="#">Annuler et revenir &agrave; la liste</a>
-            </form>
-        </script>
+                        <div class="element-radio"><label class="title">Type<span class="required">*</span></label>
+                             <div class="column column1"><label><input type="radio" name="radio" value="Film" required="required"/><span>Film</span></label>
+                                <label><input type="radio" name="radio" value="Serie" required="required"/><span>Serie</span></label>
+                            </div><span class="clearfix"></span>
+                        </div>
 
-</main><!-- /.container -->
+                        <div class="element-select"><label class="title"><span class="required">*</span></label>
+                            <div class="large"><span>
+                                <select name="select" required="required">
+                                    <option value="Dramatique">Dramatique</option>
+                                    <option value="Humour">Humour</option>
+                                    <option value="Action">Action</option>
+                                </select><i></i></span>
+                            </div>
+                        </div>
 
-    <script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
-    <script src="action/modele/Element.js"></script>
-    <script src="action/donnees/ElementDAO.js"></script>
-    <script src="action/vue/ListeElementVue.js"></script>
-    <script src="action/vue/ElementVue.js"></script>
-    <script src="action/vue/AjouterElementVue.js"></script>
-    <script src="action/vue/ModifierElementVue.js"></script>
-    <script src="action/application.js"></script>
+                        <div class="element-email"><label class="title"></label>
+                            <input class="large" type="email" name="email" value="" placeholder="Email"/>
+                        </div>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-</body>
+                        <div class="element-rating"><label class="title">Note</label>
+                            <div class="rating"><input type="radio" class="rating-input" id="rating-5" name="rating" value="5" />
+                                <label for="rating-5" class="rating-star"></label><input type="radio" class="rating-input" id="rating-4" name="rating" value="4" />
+                                <label for="rating-4" class="rating-star"></label><input type="radio" class="rating-input" id="rating-3" name="rating" value="3" />
+                                <label for="rating-3" class="rating-star"></label><input type="radio" class="rating-input" id="rating-2" name="rating" value="2" />
+                                <label for="rating-2" class="rating-star"></label><input type="radio" class="rating-input" id="rating-1" name="rating" value="1" />
+                                <label for="rating-1" class="rating-star"></label>
+                            </div>
+                        </div>
 
+                        <div class="submit"><input type="submit" value="Submit"/></div>
+                    </form>
+                </script>
+        </main>
+
+        <script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
+        <script src="action/modele/Element.js"></script>
+        <script src="action/donnees/ElementDAO.js"></script>
+        <script src="action/vue/ListeElementVue.js"></script>
+        <script src="action/vue/ElementVue.js"></script>
+        <script src="action/vue/AjouterElementVue.js"></script>
+        <script src="action/vue/ModifierElementVue.js"></script>
+        <script src="action/application.js"></script>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </body>
 </html>
