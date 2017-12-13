@@ -13,7 +13,6 @@
         <link href="css/css.css" rel="stylesheet">
         <link href="css/bounce.css" rel="stylesheet">
         <link href="css/animate.css" rel="stylesheet">
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     </head>
 
     <body>
@@ -190,18 +189,9 @@
                 </script>
         </main>
 
-        <script>
-            $(document).ready(function() {
-               $("#carouselExampleIndicators").swiperight(function() {
-                  $(this).carousel('prev');
-                });
-               $("#carouselExampleIndicators").swipeleft(function() {
-                  $(this).carousel('next');
-               });
-            });
-        </script>
 
         <script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
+        <script type="text/javascript" src="lib/jquery.mobile.custom.min.js"></script>
         <script src="action/modele/Element.js"></script>
         <script src="action/donnees/ElementDAO.js"></script>
         <script src="action/vue/ListeElementVue.js"></script>
@@ -210,11 +200,20 @@
         <script src="action/vue/ModifierElementVue.js"></script>
         <script src="action/application.js"></script>
 
+
+        <script>
+            $("#carouselExampleIndicators").on("swiperight", function(event) {
+                $(this).carousel('prev');
+            });
+            $("#carouselExampleIndicators").on("swipeleft", function(event) {
+                $(this).carousel('next');
+            });
+        </script>
+
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
