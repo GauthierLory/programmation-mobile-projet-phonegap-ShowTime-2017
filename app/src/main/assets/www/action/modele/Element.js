@@ -1,4 +1,4 @@
-var Element = function ( id,nom, synopsis, time, date, categorie, genre, lienAffiche)
+var Element = function ( id,nom, synopsis, time, date, categorie, genre)
 {
 	this.id = id;
 	this.nom = nom;
@@ -7,5 +7,4 @@ var Element = function ( id,nom, synopsis, time, date, categorie, genre, lienAff
 	this.date = date;
 	this.categorie = categorie;
 	this.genre = genre
-	this.lienAffiche = lienAffiche;
 }
