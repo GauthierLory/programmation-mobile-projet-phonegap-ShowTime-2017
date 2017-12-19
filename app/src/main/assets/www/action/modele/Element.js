@@ -1,4 +1,4 @@
-var Element = function (nom, synopsis, time, date, categorie, genre, id = undefined)
+var Element = function ( id,nom, synopsis, time, date, categorie, genre)
 {
 	this.id = id;
 	this.nom = nom;
