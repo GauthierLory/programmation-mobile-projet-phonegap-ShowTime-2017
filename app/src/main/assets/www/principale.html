@@ -119,17 +119,16 @@
                     <h1>Ajouter un Film ou une Série</h1>
 
                     <form enctype="multipart/form-data" id="formulaire-ajouter" class="formoid-biz-red" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="post">
-                        <div class="title"><h2>hi</h2></div>
+                        <div class="title"><h2></h2></div>
                         <div class="element-input">
-                            <label class="title"><span class="required">*</span></label>
-                            <input class="large" type="text" name="input" required="required" placeholder="Titre"/>
+                            <input class="element-nom" type="text" name="input" required="required" placeholder="Titre"/>
                         </div>
 
-                        <div class="element-textarea"><label class="title"><span class="required">*</span></label>
+                        <div class="element-synopsis"><label class="title"><span class="required">*</span></label>
                             <textarea class="medium" name="textarea" cols="20" rows="5" required="required" placeholder="Synopsis"></textarea>
                         </div>
 
-                        <div class="element-file">
+                        <div class="element-photo">
                             <label class="title"></label>
                             <label class="large" >
                                 <div class="button">Choisir fichier</div>
@@ -142,13 +141,13 @@
                             <input class="large" data-format="yyyy-mm-dd" type="date" name="date" required="required" placeholder="Date"/>
                         </div>
 
-                        <div class="element-radio"><label class="title">Type<span class="required">*</span></label>
+                        <div class="element-categorie"><label class="title">Catégorie<span class="required">*</span></label>
                              <div class="column column1"><label><input type="radio" name="radio" value="Film" required="required"/><span>Film</span></label>
                                 <label><input type="radio" name="radio" value="Serie" required="required"/><span>Serie</span></label>
                             </div><span class="clearfix"></span>
                         </div>
 
-                        <div class="element-select"><label class="title"><span class="required">*</span></label>
+                        <div class="element-genre"><label class="title"><span class="required">*</span></label>
                             <div class="large"><span>
                                 <select name="select" required="required">
                                     <option value="Dramatique">Dramatique</option>
@@ -162,7 +161,7 @@
                             <input class="large" type="email" name="email" value="" placeholder="Email"/>
                         </div>
 
-                        <div class="element-rating"><label class="title">Note</label>
+                        <div class="element-note"><label class="title">Note</label>
                             <div class="rating"><input type="radio" class="rating-input" id="rating-5" name="rating" value="5" />
                                 <label for="rating-5" class="rating-star"></label><input type="radio" class="rating-input" id="rating-4" name="rating" value="4" />
                                 <label for="rating-4" class="rating-star"></label><input type="radio" class="rating-input" id="rating-3" name="rating" value="3" />
