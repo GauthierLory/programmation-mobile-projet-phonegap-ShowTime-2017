@@ -20,10 +20,10 @@ var ListeElementVue = function(listeElement)
         for (var indiceElement in listeElement)
             {
                 if (actif == 1){
-                    slideAffiche += '<div class="carousel-item active"><a href="#element/' +listeElement[indiceElement].id +'"><img class="rounded mx-auto d-block img-fluid" src="images/affiches/'+listeElement[indiceElement].nom+'.jpg" alt="First slide"/></a><div class="carousel-caption d-none d-md-block"><a class="btn btn-success animated rubberBand" href="#modifier-element/' +listeElement[indiceElement].id + '">Modifier</a></div></div>';
+                    slideAffiche += '<div class="carousel-item active"><a href="#element/' +listeElement[indiceElement].id +'"><img class="rounded mx-auto d-block img-fluid" src="images/affiches/'+listeElement[indiceElement].nom+'.jpg" alt="First slide"/></a><div class="carousel-caption d-none d-block"><a id="bouton" class="btn btn-warning animated rubberBand" href="#modifier-element/' +listeElement[indiceElement].id + '">Modifier</a></div></div>';
                     var actif = 0;
                 }else{
-                    slideAffiche += '<div class="carousel-item"><a href="#element/' +listeElement[indiceElement].id +'"><img class="rounded mx-auto d-block img-fluid" src="images/affiches/'+listeElement[indiceElement].nom+'.jpg" alt="First slide"/></a><div class="carousel-caption d-none d-md-block"><a class="btn btn-success animated rubberBand" href="#modifier-element/' +listeElement[indiceElement].id + '">Modifier</a></div></div>';
+                    slideAffiche += '<div class="carousel-item"><a href="#element/' +listeElement[indiceElement].id +'"><img class="rounded mx-auto d-block img-fluid" src="images/affiches/'+listeElement[indiceElement].nom+'.jpg" alt="First slide"/></a><div class="carousel-caption d-none d-block"><a id="bouton" class="btn btn-warning animated rubberBand" href="#modifier-element/' +listeElement[indiceElement].id + '">Modifier</a></div></div>';
 
                 }
 
