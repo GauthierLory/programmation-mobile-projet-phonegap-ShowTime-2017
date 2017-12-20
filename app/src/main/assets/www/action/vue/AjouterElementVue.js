@@ -11,16 +11,26 @@ var AjouterElementVue = function()
         $("#formulaire-ajouter").on("submit", function (evenement)
         {
             evenement.preventDefault();
-            var nom = $("#nom").val();
-            console.log("NOM : "+nom);
+            var titre = $("#titre").val();
+            console.log("NOM : "+titre);
             var synopsis = $("#synopsis").val();
-            var time = $("#time").val();
+            console.log("SYNOPSIS : "+synopsis);
+            var email = $("#email").val();
+            console.log("EMAIL : "+email);
             var date = $("#date").val();
-            var categorie = $("#categorie").val();
-            var genre = $("#genre").val();
+            console.log("DATE : "+date);
+            if (document.getElementById('c1').checked) {
+              var categorie = document.getElementById('c1').value;
+            }else if (document.getElementById('c2').checked){
+                var categorie = document.getElementById('c2').value;
+            }
 
-//            instance.element = new Element(0,nom, synopsis, time, date, categorie, genre)
-            instance.element = new Element(0,"test", "test", "2:99", "12/12", "serie", "comedie")
+            console.log("CATEGORIE : "+categorie);
+            var genre = $("#genre").val();
+            console.log("GENRE : "+genre);
+
+            instance.element = new Element(0,titre, synopsis, "2:04", date, categorie, genre, "photo.jpg", email);
+//            instance.element = new Element(0,"test", "test", "2:99", "12/12", "serie", "comedie");
             window.location.hash = "#AjouterElementVue:NouveauElement";
         });
     }
