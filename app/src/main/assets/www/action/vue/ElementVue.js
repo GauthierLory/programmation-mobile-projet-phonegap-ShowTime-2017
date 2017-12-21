@@ -14,8 +14,8 @@ var ElementVue = function (element)
 		$("#element-genre").html(element.genre);
 		$("#element-email").html(element.email);
 		$("#element-duree").html(element.duree+" minutes");
-		$("#boutonSupprimer").html('<a id="bouton" class="btn btn-danger animated swing" href="#SupprimerElementVue:SupressionElement/'+element.id+'">Supprimer</a>');
-		$("#boutonModifier").html('<a id="bouton" class="btn btn-warning animated rubberBand" href="#modifier-element/' +element.id + '">Modifier</a>');
+		$("#bouton-supprimer").html('<a id="bouton" class="btn btn-danger animated swing" href="#SupprimerElementVue:SupressionElement/'+element.id+'">Supprimer</a>');
+		$("#bouton-modifier").html('<a id="bouton" class="btn btn-warning animated rubberBand" href="#modifier-element/' +element.id + '">Modifier</a>');
 
 	}
 }
