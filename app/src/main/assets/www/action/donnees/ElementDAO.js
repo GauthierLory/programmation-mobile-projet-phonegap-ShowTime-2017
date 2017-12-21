@@ -52,5 +52,18 @@ var ElementDAO = function()
         }
     }
 
+    this.supprimerElement = function(elementSupprime)
+        {
+            for (var indiceElement in listeElement)
+            {
+                element = listeElement[indiceElement];
+                if(element.id == elementSupprime.id)
+                {
+                    listeElement.splice(indiceElement,1);
+                    return;
+                }
+            }
+        }
+
 
 }

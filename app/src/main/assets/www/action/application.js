@@ -31,6 +31,14 @@ var applicationListeElement =
 	            this.elementDAO.ajouterElement(element);
 	            window.location.hash = "#";
 	        }
+        else if (ancre.match(/^#SupprimerElementVue:SupressionElement\/([0-9]+)/))
+            {
+                var trouvaille = ancre.match(/^#SupprimerElementVue:SupressionElement\/([0-9]+)/);
+                var id = trouvaille[1];
+                var element = this.elementDAO.getElementParId(id);
+                this.elementDAO.supprimerElement(element);
+                window.location.hash = "#";
+            }
 
         else if(ancre.match(/^#modifier-element\/([0-9]+)/))
 	        {
@@ -52,7 +60,6 @@ var applicationListeElement =
 
         else
         {
-        console.log("application->naviguer else ancre :" + ancre);
             var trouvaille = ancre.match(/^#element\/([0-9]+)/);
             var id = trouvaille[1];
             var element = this.elementDAO.getElementParId(id);
