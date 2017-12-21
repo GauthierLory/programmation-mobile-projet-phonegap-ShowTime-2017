@@ -1,6 +1,6 @@
 var applicationListeElement =
 {
-    elementDAO: new ElementDAO(),
+    elementDAO: new ElementDAOLocalStorage(),
     ajouterElementVue: new AjouterElementVue(),
     modifierElementVue : null,
     lancer:function()
