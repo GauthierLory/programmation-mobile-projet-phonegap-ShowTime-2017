@@ -14,6 +14,9 @@ var ModifierElementVue = function(element)
         var elementSynopsis = '<textarea id="synopsis" class="medium" name="textarea" cols="20" rows="5" required="required">'+ element.synopsis+'</textarea>';
         $("#modifSynopsis").html(elementSynopsis);
 
+        var elementDuree = '<input id="duree" class="element-duree" type="number" name="input" required="required" value="'+element.duree+'"/>';
+        $("#modifDuree").html(elementDuree);
+
         var elementUrl = '<input id="url" class="element-url" type="text" name="input" required="required" value="'+element.url+'" />';
         $("#modifUrl").html(elementUrl);
 
@@ -36,26 +39,19 @@ var ModifierElementVue = function(element)
         {
             evenement.preventDefault();
             var titre = $("#titre").val();
-            console.log("NOM : "+titre);
             var synopsis = $("#synopsis").val();
-            console.log("SYNOPSIS : "+synopsis);
             var email = $("#email").val();
-            console.log("EMAIL : "+email);
             var date = $("#date").val();
-            console.log("DATE : "+date);
+            var duree = $("#duree").val();
             var url = $("#url").val();
-            console.log("URL : "+url);
             if (document.getElementById('c1').checked) {
               var categorie = document.getElementById('c1').value;
             }else if (document.getElementById('c2').checked){
                 var categorie = document.getElementById('c2').value;
             }
-
-            console.log("CATEGORIE : "+categorie);
             var genre = $("#genre").val();
-            console.log("GENRE : "+genre);
 
-            instance.elementModifier = new Element(element.id, titre, synopsis, "2:04", date, categorie, genre, url, email);
+            instance.elementModifier = new Element(element.id, titre, synopsis, duree, date, categorie, genre, url, email);
             window.location.hash = "#ModifierElementVue:ModifierElement";
         });
     }

@@ -72,6 +72,7 @@
                     <p id="element-genre"></p></br>
                     <h2 id="element-synopsis"></h2>
                     <p id="element-email"></p>
+                    <p id="element-duree"></p>
                     <p>Vue le : </p>
                     <p id="element-date"></p>
                     </br>
@@ -106,6 +107,10 @@
                                 <input type="file" class="file_input" name="file" />
                                 <div class="file_text">pas de fichiers</div>
                             </label>
+                        </div>
+
+                        <div id="modifDuree" class="element-input">
+
                         </div>
 
                         <div id="modifUrl" class="element-input">
@@ -173,7 +178,10 @@
                         </label>
                     </div>
 
-                    <div class="title"><h2></h2></div>
+                    <div class="element-input">
+                        <input id="duree" class="element-duree" type="number" name="input" required="required" placeholder="Durée"/>
+                    </div>
+
                     <div class="element-input">
                         <input id="url" class="element-url" type="text" name="input" required="required" placeholder="URL affiche 600*800"/>
                     </div>
