@@ -9,7 +9,6 @@ var ListeElementVue = function(listeElement)
         var slideIndice = "";
         for (var indiceElement in listeElement)
             {
-                console.log(listeElement[indiceElement]);
                 slideIndice += '<li data-target="#carouselExampleIndicators" data-slide-to="'+ listeElement[indiceElement].id +'"></li>';
 
             }

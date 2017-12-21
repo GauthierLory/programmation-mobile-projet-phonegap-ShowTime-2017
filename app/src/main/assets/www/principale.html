@@ -85,14 +85,14 @@
                     <link rel="stylesheet" href="css/formoid-biz-red.css" type="text/css" />
                     <h1>Modifier un Film ou une Série</h1>
 
-                    <form enctype="multipart/form-data" id="formulaire-moodifier" class="formoid-biz-red" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="post">
+                    <form enctype="multipart/form-data" id="formulaire-modifier" class="formoid-biz-red" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="post">
                         <div class="title"><h2></h2></div>
-                        <div class="element-input">
-                            <input class="element-nom" type="text" name="input" required="required" placeholder="Titre"/>
+                        <div id="modifTitre" class="element-input">
+
                         </div>
 
-                        <div class="element-synopsis"><label class="title"><span class="required">*</span></label>
-                            <textarea class="medium" name="textarea" cols="20" rows="5" required="required" placeholder="Synopsis"></textarea>
+                        <div id="modifSynopsis" class="element-synopsis"><label class="title"><span class="required">*</span></label>
+
                         </div>
 
                         <div class="element-photo">
@@ -104,23 +104,23 @@
                             </label>
                         </div>
 
-                        <div class="element-input">
-                            <input id="url" class="element-url" type="text" name="input" required="required" placeholder="URL affiche 600*800"/>
+                        <div id="modifUrl" class="element-input">
+
                         </div>
 
-                        <div class="element-date"><label class="title"><span class="required">*</span></label>
-                            <input class="large" data-format="yyyy-mm-dd" type="date" name="date" required="required" placeholder="Date"/>
+                        <div id="modifDate" class="element-date"><label class="title"><span class="required">*</span></label>
+
                         </div>
 
                         <div class="element-categorie"><label class="title">Catégorie<span class="required">*</span></label>
-                             <div class="column column1"><label><input type="radio" name="radio" value="Film" required="required"/><span>Film</span></label>
-                                <label><input type="radio" name="radio" value="Serie" required="required"/><span>Serie</span></label>
+                             <div class="column column1"><label><input id="c1" type="radio" name="radio" value="Film" required="required"/><span>Film</span></label>
+                                <label><input id="c2" type="radio" name="radio" value="Serie" required="required"/><span>Serie</span></label>
                             </div><span class="clearfix"></span>
                         </div>
 
                         <div class="element-genre"><label class="title"><span class="required">*</span></label>
-                            <div class="large"><span>
-                                <select name="select" required="required">
+                            <div id="modifGenre" class="large"><span>
+                                <select id="genre" name="select" required="required">
                                     <option value="Dramatique">Dramatique</option>
                                     <option value="Humour">Humour</option>
                                     <option value="Action">Action</option>
@@ -128,8 +128,8 @@
                             </div>
                         </div>
 
-                        <div class="element-email"><label class="title"></label>
-                            <input class="large" type="email" name="email" value="" placeholder="Email"/>
+                        <div id="modifEmail" class="element-email"><label class="title"></label>
+
                         </div>
 
                         <div class="element-note"><label class="title">Note</label>

@@ -5,47 +5,58 @@ var ModifierElementVue = function(element)
 
     this.afficher = function()
     {
+        console.log(element);
         $("#contenu").html(ModifierElementVue.pageModifierElement);
 
-        var elementNom = '<label for="nom">Nom</label><input type="text" name="nom" id="nom" value ="'+ element.nom +'"/>';
-        $("#nom").html(elementNom);
+        var elementTitre = '<input id="titre" class="element-nom" type="text" value ="'+element.nom+'" name="input" required="required"/>';
+        $("#modifTitre").html(elementTitre);
 
-        var elementSynopsis = '<label for="synopsis">synopsis</mark></label><input type="textarea" name="synopsis" id="synopsis" value ="'+  element.synopsis +'"/>';
-        $("#synopsis").html(elementSynopsis);
+        var elementSynopsis = '<textarea id="synopsis" class="medium" name="textarea" cols="20" rows="5" required="required">'+ element.synopsis+'</textarea>';
+        $("#modifSynopsis").html(elementSynopsis);
 
-        var elementPhoto = '<label for="photo">Photo</label><textarea name="photo" id="photo" valute ="'+ element.photo+'"/>';
-        $("#photo").html(elementPhoto);
+        var elementUrl = '<input id="url" class="element-url" type="text" name="input" required="required" value="'+element.url+'" />';
+        $("#modifUrl").html(elementUrl);
 
-        var elementDate = '<label for="date">date</label><input type="date" name="date" id="date" value ="'+ element.date +'"/>';
-        $("#date").html(elementDate);
+        var elementDate = '<input id="date" class="large" data-format="yyyy-mm-dd" type="date" name="date" required="required" value="'+element.date+'"/>';
+        $("#modifDate").html(elementDate);
 
-        var elementCategorie = '<label for="categorie">categorie</label><input type="text" name="categorie" id="categorie" value ="'+ element.categorie +'"/>';
-        $("#categorie").html(elementCategorie);
+        if(element.categorie == "Film"){
+            document.getElementById("c1").checked = true;
+        }else{
+            document.getElementById("c2").checked = true;
+        }
 
-        var elementGenre = '<label for="genre">Genre</label><input type="text" name="genre" id="genre" value ="'+ element.genre +'"/>';
-        $("#genre").html(elementGenre);
+        document.getElementById('genre').value=element.genre;
 
-        var elementEmail = '<label for="email">Email</label><textarea name="Email" id="email" value ="'+ element.email +'"/>';
-        $("#email").html(elementEmail);
-
-        var elementNote = '<label for="note">Note</label><textarea name="note" id="note" value ="'+ element.note +'"/>';
-        $("#note").html(elementNote);
+        var elementEmail = '<input id="email" class="large" type="email" name="email" value="'+element.email+'"/>';
+        $("#modifEmail").html(elementEmail);
 
 
-             $("#formulaire-ajouter").on("submit", function (evenement)
+        $("#formulaire-modifier").on("submit", function (evenement)
         {
             evenement.preventDefault();
-            var nom = $("#nom").val();
+            var titre = $("#titre").val();
+            console.log("NOM : "+titre);
             var synopsis = $("#synopsis").val();
-            var photo = $("#photo").val();
-            var date = $("#date").val();
-            var categorie = $("#categorie").val();
-            var genre = $("#genre").val();
+            console.log("SYNOPSIS : "+synopsis);
             var email = $("#email").val();
-            var note = $("#note").val();
+            console.log("EMAIL : "+email);
+            var date = $("#date").val();
+            console.log("DATE : "+date);
+            var url = $("#url").val();
+            console.log("URL : "+url);
+            if (document.getElementById('c1').checked) {
+              var categorie = document.getElementById('c1').value;
+            }else if (document.getElementById('c2').checked){
+                var categorie = document.getElementById('c2').value;
+            }
 
-            instance.element = new element(nom, synopsis, photo, date, categorie, genre, emqil,note)
-            window.location.hash = "#AjouterElementVue:NouveauElement";
+            console.log("CATEGORIE : "+categorie);
+            var genre = $("#genre").val();
+            console.log("GENRE : "+genre);
+
+            instance.elementModifier = new Element(element.id, titre, synopsis, "2:04", date, categorie, genre, url, email);
+            window.location.hash = "#ModifierElementVue:ModifierElement";
         });
     }
 }
